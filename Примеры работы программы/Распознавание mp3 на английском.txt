@@ -1,13 +1,11 @@
->> python demo.py --wav "C:\Users\nikita.belov\Documents\GitHub\simple-russian-stt\audio_samples\english_audio.mp3" --log-level info
+>> python demo.py --wav "C:\Users\nikita.belov\Documents\GitHub\simple-multilang-stt\audio_samples\english_audio.mp3" --log-level info
 >>
-C:\Users\nikita.belov\Documents\GitHub\simple-russian-stt\.venv\Lib\site-packages\ctranslate2\__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
-  import pkg_resources
 14:52:08 [INFO] demo: Найдена локальная модель в папке проекта: models\faster-whisper-small
 14:52:08 [INFO] demo: Загрузка модели 'models\faster-whisper-small' (device=cpu, compute_type=int8)...
 14:52:09 [INFO] speech_api: Модель Whisper загружена: models\faster-whisper-small (device=cpu, compute_type=int8)
 14:52:09 [INFO] demo: Модель загружена за 0.64 с.
 14:52:09 [INFO] demo: Язык не задан — включён авто-детект.
-14:52:09 [INFO] demo: Распознавание файла: C:\Users\nikita.belov\Documents\GitHub\simple-russian-stt\audio_samples\english_audio.mp3 (1.52 MB)
+14:52:09 [INFO] demo: Распознавание файла: C:\Users\nikita.belov\Documents\GitHub\simple-multilang-stt\audio_samples\english_audio.mp3 (1.52 MB)
 14:52:09 [INFO] speech_api: Частота дискретизации файла 44100 Гц. Передискретизация в 16000 Гц через librosa...
 14:52:10 [INFO] speech_api: Передискретизация завершена.
 14:52:10 [INFO] faster_whisper: Processing audio with duration 00:17.110
