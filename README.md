@@ -1,6 +1,6 @@
 # Offline ASR на Faster-Whisper: speech_api + demo
 
-Многоязычное офлайн-распознавание речи на базе [Faster-Whisper (CTranslate2)](<[https://](https://github.com/SYSTRAN/faster-whisper)>). Репозиторий содержит:
+Многоязычное офлайн-распознавание речи на базе [Faster-Whisper](https://github.com/SYSTRAN/faster-whisper) ([CTranslate2](https://github.com/OpenNMT/CTranslate2)). Репозиторий содержит:
 
 - библиотечный модуль speech_api.py — чистый и переиспользуемый API,
 - CLI-утилиту demo.py — удобный интерфейс командной строки для проверки и использования.
