@@ -1,0 +1,26 @@
+>> python demo.py --wav "C:\Users\nikita.belov\Documents\GitHub\simple-russian-stt\audio_samples\english_audio.mp3" --log-level info
+>>
+C:\Users\nikita.belov\Documents\GitHub\simple-russian-stt\.venv\Lib\site-packages\ctranslate2\__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+14:52:08 [INFO] demo: Найдена локальная модель в папке проекта: models\faster-whisper-small
+14:52:08 [INFO] demo: Загрузка модели 'models\faster-whisper-small' (device=cpu, compute_type=int8)...
+14:52:09 [INFO] speech_api: Модель Whisper загружена: models\faster-whisper-small (device=cpu, compute_type=int8)
+14:52:09 [INFO] demo: Модель загружена за 0.64 с.
+14:52:09 [INFO] demo: Язык не задан — включён авто-детект.
+14:52:09 [INFO] demo: Распознавание файла: C:\Users\nikita.belov\Documents\GitHub\simple-russian-stt\audio_samples\english_audio.mp3 (1.52 MB)
+14:52:09 [INFO] speech_api: Частота дискретизации файла 44100 Гц. Передискретизация в 16000 Гц через librosa...
+14:52:10 [INFO] speech_api: Передискретизация завершена.
+14:52:10 [INFO] faster_whisper: Processing audio with duration 00:17.110
+14:52:11 [INFO] faster_whisper: Detected language 'en' with probability 0.81
+14:52:17 [INFO] demo: Файл распознан за 7.87 с. Язык определён: en. Слов: 115
+
+--- Результат распознавания файла ---
+Язык (определён): en (p=0.81)
+Длительность аудио: 17.11 c
+Текст:
+D.J. F.A.R.E.  Summon, I'm a doom, I'm a doom, I'm a you,  Assume I'm a human, what I gotta do to get it through to you.  I'm super human, innovative, and I made it rubble,  So the anything you say can shake it, shake it off of me,  And it'll do to you, I'm devastating, more than ever demonstrating,  How to give a motherfuckin' audience a feeling like it's never fading,  Never fading, and I know the haters are forever waiting,  For the day that they can say I fell off, they'll be celebrating,  Cause I know the way to get them motivated, I make elevating music,  You make elevator music.
+
+Слова (115):
+D .J. F .A .R .E. Summon, I'm a doom, I'm a doom, I'm a you, Assume I'm a human, what I gotta do to get it through to you. I'm super human, innovative, and I made it rubble, So the anything you say can shake it, shake it off of me, And it'll do to you, I'm devastating, more than ever demonstrating, How to give a motherfuckin' audience a feeling like it's never fading, Never fading, and I know the haters are forever waiting, For the day that they can say I fell off, they'll be celebrating, Cause I know the way to get them motivated, I make elevating music, You make elevator music.
+14:52:17 [INFO] demo: Освобождение ресурсов модели...
+14:52:17 [INFO] demo: Готово.
