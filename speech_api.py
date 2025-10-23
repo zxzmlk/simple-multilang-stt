@@ -207,9 +207,6 @@ class Recognizer:
 
     def close(self) -> None:
         """Освобождает ресурсы модели."""
-        # У Faster-Whisper нет явного метода `close()`.
-        # Присвоение None удаляет ссылку на объект модели, что позволяет сборщику мусора Python
-        # освободить память, которую она занимала (особенно важно для GPU).
         self._model = None
 
 
@@ -264,7 +261,6 @@ def transcribe_wav(
     if not os.path.isfile(wav_path):
         raise SpeechApiError(ErrorCode.IO, f"Файл не найден: {wav_path}")
 
-    # Вспомогательная функция для "запасного плана" — распознавания через ffmpeg.
     # Faster-Whisper сам вызовет ffmpeg, если ему передать путь к файлу.
     def _fallback_via_path() -> Transcription:
         LOGGER.info("Чтение файла делегировано Faster-Whisper (ffmpeg). Путь: %s", wav_path)
