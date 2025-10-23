@@ -1,0 +1,55 @@
+>>     python demo.py --mic 20 --words-mode times --log-level info
+>>
+13:46:43 [INFO] demo: Найдена локальная модель в папке проекта: models\faster-whisper-small
+13:46:43 [INFO] demo: Загрузка модели 'models\faster-whisper-small' (device=cpu, compute_type=int8)...
+13:46:43 [INFO] speech_api: Модель Whisper загружена: models\faster-whisper-small (device=cpu, compute_type=int8)
+13:46:43 [INFO] demo: Модель загружена за 0.67 с.
+13:46:43 [INFO] demo: Язык не задан — включён авто-детект.
+13:46:43 [INFO] demo: Запись с микрофона на 20.00 с и распознавание...
+13:46:43 [INFO] speech_api: Начало записи с микрофона: 20.00 сек
+13:47:03 [INFO] speech_api: Запись завершена, начинается распознавание...
+13:47:03 [INFO] speech_api: Аудио нормализовано (пиковая громкость: 0.0362).
+13:47:03 [INFO] faster_whisper: Processing audio with duration 00:19.994
+13:47:04 [INFO] faster_whisper: Detected language 'en' with probability 0.88
+13:47:07 [INFO] demo: Распознавание записи с микрофона завершено за 23.61 с. Язык определён: en. Слов: 31
+
+--- Результат распознавания с микрофона ---
+Язык (определён): en (p=0.88)
+Длительность записи: 19.99 c
+Текст:
+A course in conversational English. Dialogues. Listen and read aloud the dialogues below.  Hello, Sasha.  Hello, Bess.  How are you?  Good, thanks. And how are you?  I'm good too.  Goodbye.  Goodbye.
+
+Слова с таймкодами (31):
+[   1.12 ..    1.80] A (p=0.18)
+[   1.80 ..    2.12] course (p=0.93)
+[   2.12 ..    2.60] in (p=0.99)
+[   2.60 ..    3.50] conversational (p=0.98)
+[   3.50 ..    4.12] English. (p=0.92)
+[   4.82 ..    5.50] Dialogues. (p=0.88)
+[   6.12 ..    6.78] Listen (p=0.99)
+[   6.78 ..    7.28] and (p=0.98)
+[   7.28 ..    7.62] read (p=1.00)
+[   7.62 ..    8.12] aloud (p=1.00)
+[   8.12 ..    8.64] the (p=0.92)
+[   8.64 ..    9.22] dialogues (p=0.94)
+[   9.22 ..    9.76] below. (p=0.59)
+[  10.64 ..   11.32] Hello, (p=0.89)
+[  11.46 ..   11.72] Sasha. (p=0.91)
+[  12.32 ..   12.60] Hello, (p=0.99)
+[  12.74 ..   13.04] Bess. (p=0.81)
+[  13.40 ..   13.62] How (p=0.99)
+[  13.62 ..   13.84] are (p=1.00)
+[  13.84 ..   14.04] you? (p=1.00)
+[  14.34 ..   14.60] Good, (p=0.99)
+[  14.76 ..   14.98] thanks. (p=0.98)
+[  15.42 ..   15.58] And (p=0.98)
+[  15.58 ..   15.76] how (p=0.97)
+[  15.76 ..   15.86] are (p=1.00)
+[  15.86 ..   16.06] you? (p=1.00)
+[  16.42 ..   16.62] I'm (p=0.99)
+[  16.62 ..   16.78] good (p=1.00)
+[  16.78 ..   17.04] too. (p=0.61)
+[  17.56 ..   17.88] Goodbye. (p=0.84)
+[  18.32 ..   18.58] Goodbye. (p=0.89)
+13:47:07 [INFO] demo: Освобождение ресурсов модели...
+13:47:07 [INFO] demo: Готово.
