@@ -39,11 +39,6 @@ DEFAULT_LOCAL_MODEL_PATH = os.path.join("models", "faster-whisper-small")
 def setup_logging(level_name: str = "info") -> None:
     """
     Настраивает логирование в консоль и пробрасывает логи из speech_api.
-
-    Принципиальный момент:
-      - basicConfig настраивает корневой логгер и формат для всей программы.
-      - Явно выставляем уровень для логгера "speech_api", чтобы его сообщения отображались в консоли
-        вместе с логами приложения. В speech_api уже настроен файл с ротацией, здесь добавляем консоль.
     """
     level = getattr(logging, level_name.upper(), logging.INFO)
     logging.basicConfig(
@@ -92,10 +87,6 @@ def _normalize_lang(s: Optional[str]) -> Optional[str]:
     """
     Приводит значение аргумента --lang к None для авто-детекта,
     иначе возвращает исходную строку (без изменения регистра).
-
-    Принципиальный момент:
-      - Возврат None — это "включить авто-детект" на уровне движка.
-      - Любое иное значение трактуется как фиксированный язык, авто-детект отключается.
     """
     if s is None:
         return None
@@ -107,7 +98,6 @@ def main():
     parser = argparse.ArgumentParser(description="Демо русской речи (Faster-Whisper, офлайн)")
     parser.add_argument("--wav", type=str, help="Путь к аудиофайлу (WAV, MP3, и др.)")
     parser.add_argument("--mic", type=float, help="Длительность записи с микрофона, сек (например, 7)")
-    # Убираем default, чтобы можно было отличить отсутствие аргумента от явного указания.
     parser.add_argument(
         "--model",
         type=str,
@@ -162,7 +152,6 @@ def main():
             return 0
 
         # Выбор модели: явная > локальная папка > скачивание.
-        # Принципиальный момент: последовательность выбора гарантирует офлайн-режим при наличии локальной модели.
         if args.model:
             model_to_use = args.model
             log.info("Используем модель, указанную вручную: %s", model_to_use)
@@ -192,9 +181,6 @@ def main():
 
         enable_words = not args.no_words
 
-        # Принципиальный момент:
-        # - Используем проверку "is not None", чтобы явно заданное пустое значение или 0.0
-        #   не трактовались как отсутствие аргумента.
         if args.wav is not None:
             wav_path = args.wav
             if not os.path.isfile(wav_path):
