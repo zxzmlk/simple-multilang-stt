@@ -1,4 +1,4 @@
-# Offline ASR на Faster-Whisper: speech_api + demo
+# Локальное распознавание речи (Аудио в текст) на базе Faster-Whisper
 
 Многоязычное офлайн-распознавание речи на базе [Faster-Whisper](https://github.com/SYSTRAN/faster-whisper) ([CTranslate2](https://github.com/OpenNMT/CTranslate2)). Репозиторий содержит:
 
